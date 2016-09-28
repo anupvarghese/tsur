@@ -1,3 +1,9 @@
+use std::io;
+
 fn main() {
-    println!("Hello, world!");
+    println!("Guess the letter!");
+    println!("Pls enter your guess");
+    let mut guess = String::new();
+    io::stdin().read_line(&mut guess).expect("Failed to read the letter");
+    println!("Your guess: {}", guess);
 }
